@@ -59,29 +59,32 @@ function setup() {
   myVida.addActiveZone(
     "zone0",
     0, 0.5,
-    trigger
+    trigger,
     0.05, // new zoneWidth value
     0.3   // new zoneHeight value
   );
   myVida.addActiveZone(
     "zone1",
     0, 0.5,
-    trigger
+    trigger,
       0.05, // new zoneWidth value
        0.1   // new zoneHeight value
   );
   myVida.addActiveZone(
     "zone2",
     0.3, 0.3, 0.3, 0.3,
-      0.05, // new zoneWidth value
-       0.3   // new zoneHeight value
-    trigger
+    trigger,
+    0.05, // new zoneWidth value
+    0.1   // new zoneHeight value
+    
   );
   
   myVida.addActiveZone (
     "zone3",
 0.7, 0.7, 0.7, 0.7,
-trigger 
+   trigger, 
+    0.05, // new zoneWidth value
+    0.1   // new zoneHeight value
 );
  
   
