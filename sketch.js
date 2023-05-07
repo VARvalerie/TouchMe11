@@ -4,9 +4,16 @@ let memorylayers, HOLO_B1, LEIS_MUSIC_pipe2, LEOF_SAAV_mldy3;
 
 let sounds = [];
 
+let canvasWidth = 640;
+let canvasHeight = 480;
 
 zoneWidth = 0.05;
 zoneHeight = 0.3; 
+
+function onActiveZoneChange(zone) {
+  let soundIndex = myVida.activeZones.indexOf(zone);
+  sounds[soundIndex].loop();
+}
 
 function preload() {
   console.log('[preload] loading samples...');
@@ -52,7 +59,7 @@ function setup() {
   myVida = new Vida(this);
   myVida.progressiveBackgroundFlag = true;
   myVida.imageFilterThreshold = 0.2;
-  myVida.imageFilterInvert;
+  myVida.imageFilterInvert = true;
   myVida.mirror = myVida.MIRROR_HORIZONTAL;
   myVida.handleActiveZonesFlag = true;
   
@@ -71,20 +78,19 @@ function setup() {
        0.1   // new zoneHeight value
   );
   myVida.addActiveZone(
-    "zone2",
-    0.3, 0.3, 0.3, 0.3,
-    trigger,
-    0.05, // new zoneWidth value
-    0.1   // new zoneHeight value
-    
-  );
+  "zone2",
+  0.3, 0.3, 0.3, 0.3,
+  trigger,
+  0.05,
+  0.1
+);
   
-  myVida.addActiveZone (
-    "zone3",
-0.7, 0.7, 0.7, 0.7,
-   trigger, 
-    0.05, // new zoneWidth value
-    0.1   // new zoneHeight value
+  myVida.addActiveZone(
+  "zone3",
+  0.7, 0.7,
+  trigger,
+  0.05,
+  0.1
 );
  
   
