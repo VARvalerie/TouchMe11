@@ -83,6 +83,31 @@ function setup() {
     0.4, 0.35, 0.05, 0.05,
     trigger
   );
+  myVida.addActiveZone(
+    "zone4",
+    0.475, 0.65, 0.05, 0.05,
+    trigger
+  );
+  myVida.addActiveZone(
+    "zone5",
+    0.55, 0.35, 0.05, 0.05,
+    trigger
+  );
+  myVida.addActiveZone(
+    "zone6",
+    0.55, 0.6, 0.09, 0.08,
+    trigger
+  );
+  myVida.addActiveZone(
+    "zone7",
+    0.6, 0.45, 0.05, 0.05,
+    trigger
+  );
+  myVida.addActiveZone(
+    "zone8",
+    0.8, 0.75, 0.07, 0.09,
+    trigger
+  );
   
   myVida.setActiveZonesNormFillThreshold(0.5);
 
