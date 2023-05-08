@@ -15,6 +15,21 @@ function onActiveZoneChange(zone) {
   sounds[soundIndex].loop();
 }
 
+function stopAllSounds() {
+  for (let i = 0; i < sounds.length; i++) {
+    sounds[i].stop();
+  }
+}
+
+function draw() {
+  // ...
+  
+  // check if there are active zones
+  if (myVida.activeZones.length === 0) {
+    stopAllSounds();
+  }
+}
+
 function preload() {
   console.log('[preload] loading samples...');
 
