@@ -65,65 +65,26 @@ function setup() {
   
   myVida.addActiveZone(
     "zone0",
-    0, 0.5,
-    trigger,
-    0.05, // new zoneWidth value
-    0.3   // new zoneHeight value
+    0, 0.5, 0.05, 0.3,
+    trigger
   );
   myVida.addActiveZone(
     "zone1",
-    0, 0.5,
-    trigger,
-      0.05, // new zoneWidth value
-       0.1   // new zoneHeight value
+    0, 0.5, 0.05, 0.1,
+    trigger
   );
   myVida.addActiveZone(
-  "zone2",
-  0.3, 0.3, 0.3, 0.3,
-  trigger,
-  0.05,
-  0.1
-);
-  
+    "zone2",
+    0.3, 0.3, 0.3, 0.3,
+    trigger
+  );
   myVida.addActiveZone(
-  "zone3",
-  0.7, 0.7,
-  trigger,
-  0.05,
-  0.1
-);
- 
+    "zone3",
+    0.7, 0.7, 0.05, 0.1,
+    trigger
+  );
   
   myVida.setActiveZonesNormFillThreshold(0.5);
-  /*
-    Let's create several active zones. VIDA uses normalized (in the range from
-    0.0 to 1.0) instead of pixel-based. Thanks to this, the position and size
-    of the zones are independent of any eventual changes in the captured image
-    resolution.
-  */
-
-  let numberOfActiveZones = sounds.length;
-  let padding = 0.07;
-  let zoneWidth = 0.1, zoneHeight = 0.5;
-  let hOffset = (1.0 - (numberOfActiveZones * zoneWidth + (numberOfActiveZones - 1) * padding)) / 2.0;
-  let vOffset = 0.25;
-  
-  for(let i = 0; i < numberOfActiveZones; i++) {
-    /*
-      addActiveZone function (which, of course, adds active zones to the VIDA
-      object) requires the following parameters:
-        [your vida object].addActiveZone(
-          _id, // zone's identifier (integer or string)
-          _normX, _normY, _normW, _normH, // normalized (!) rectangle
-          _onChangeCallbackFunction // callback function (triggered on change)
-        );
-    */
-    myVida.addActiveZone(
-      i,
-      hOffset + i * (zoneWidth + padding), vOffset, zoneWidth, zoneHeight,
-      onActiveZoneChange
-    );
-  }
 
   frameRate(30); // set framerate
 }
