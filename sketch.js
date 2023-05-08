@@ -1,6 +1,6 @@
 let myCapture, myVida;
 
-let memorylayers, HOLO_B1, LEIS_MUSIC_pipe2, LEOF_SAAV_mldy3;
+let memorylayers, HOLO_B1, LEIS_MUSIC_pipe2, LEOF_SAAV_mldy3, EN_M1_mandolin1, EN_M1_mldy2, EN_M1_mldy3, EN_M2_mldy3, EN_M2_mldyB1;
 
 let sounds = [];
 
@@ -22,12 +22,22 @@ function preload() {
   HOLO_B1          = loadSound('mp3/HOLO_B1.mp3');
   LEIS_MUSIC_pipe2 = loadSound('mp3/LEIS_MUSIC_pipe2.mp3');
   LEOF_SAAV_mldy3  = loadSound('mp3/LEOF_SAAV_mldy3.mp3');
+  EN_M1_mandolin1  = loadSound('mp3/EN_M1_mandolin1.mp3');
+  EN_M1_mldy2      = loadSound('mp3/EN_M1_mldy2.mp3');
+  EN_M1_mldy3      = loadSound('mp3/EN_M1_mldy3.mp3');
+  EN_M2_mldy3      = loadSound('mp3/EN_M2_mldy3.mp3');
+  EN_M2_mldyB1     = loadSound('mp3/EN_M2_mldyB1.mp3');
 
   sounds = [
     memorylayers,
     HOLO_B1, 
     LEIS_MUSIC_pipe2,
-    LEOF_SAAV_mldy3
+    LEOF_SAAV_mldy3,
+    EN_M1_mandolin1, 
+    EN_M1_mldy2, 
+    EN_M1_mldy3, 
+    EN_M2_mldy3, 
+    EN_M2_mldyB1,
   ];
 
   console.log('[preload] samples loaded');
